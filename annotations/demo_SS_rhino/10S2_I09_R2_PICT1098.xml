@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<annotation>
+  <folder>demo</folder>
+  <filename>10S2_I09_R2_PICT1098.JPG</filename>
+  <path>./datasets/demo/</path>
+  <source>
+    <database>U-Infuse FlickR</database>
+  </source>
+  <size>
+    <width>2048</width>
+    <height>1536</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>rhinoceros</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>0</xmin>
+      <ymin>0</ymin>
+      <xmax>855</xmax>
+      <ymax>868</ymax>
+    </bndbox>
+  </object>
+</annotation>

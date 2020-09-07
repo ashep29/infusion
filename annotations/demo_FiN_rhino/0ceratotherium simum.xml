@@ -1,0 +1,38 @@
+<annotation>
+	<folder>inat_flickr_rhino</folder>
+	<filename>0ceratotherium simum.jpg</filename>
+	<path>/homes/une/ashepley/Location_Invariance_Resubmission/datasets/inat_flickr_rhino/0ceratotherium simum.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>799</width>
+		<height>571</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>rhinoceros</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>141</xmin>
+			<ymin>208</ymin>
+			<xmax>350</xmax>
+			<ymax>464</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>rhinoceros</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>346</xmin>
+			<ymin>155</ymin>
+			<xmax>583</xmax>
+			<ymax>488</ymax>
+		</bndbox>
+	</object>
+</annotation>

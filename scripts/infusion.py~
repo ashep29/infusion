@@ -1,0 +1,37 @@
+"""
+Author: Andrew Shepley
+Contact: asheple2@une.edu.au
+Source: Location Invariance/U-Infuse
+Purpose: 
+Methods 
+"""
+
+import os
+import shutil
+import random
+
+
+def separate_infusion(infusion_split, all_infusion_images, infusion_dataset, infusion_annotations, training_dataset,infusion_images):
+    #create a temp folder to contain the infusion images
+    temp_dir_data = './datasets/infusion/'
+    temp_dir_annotations = './annotations/infusion/'
+    if not os.path.exists(temp_dir_data):
+        os.makedirs(temp_dir_data)
+    if not os.path.exists(temp_dir_annotations):
+        os.makedirs(temp_dir_annotations)
+    #calculate the required number of infusion images based on the infusion percentage splits
+    num_infusion_images = round(infusion_split*len(os.listdir(training_dataset)))
+    print("Percentage infusion: ",infusion_split*100,"%")
+    print("Number of Infusion Images: ", num_infusion_images)
+    #seperate the infusion images out
+    while len(infusion_images)< num_infusion_images:
+        index = random.randint(0, len(all_infusion_images)-1)
+        infusion_images.add(all_infusion_images[index])
+    #move the infusion and their annotations to the temp dir
+    for each_ref in infusion_images:
+        if os.path.exists(infusion_dataset+each_ref):
+            shutil.copy(infusion_dataset+each_ref, temp_dir_data+each_ref)
+            shutil.copy(infusion_annotations+each_ref[:-4]+'.xml', temp_dir_annotations+each_ref[:-4]+'.xml') 
+    return
+
+
